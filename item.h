@@ -35,6 +35,8 @@ public:
 	bool Write(ostream& output)const;
 	bool Equals(const Item& rhs)const;
 	double GetPrice()const;
+	unsigned int GetCategory()const;
+	unsigned int GetQuantity()const;
 };
 
 

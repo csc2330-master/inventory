@@ -66,7 +66,7 @@ bool Item::Read(istream &input) {
 		_name = new char[strlen(temporalName) + 1];
 	}
 	strcpy(_name, temporalName);
-	return !input.fail();
+	return !input.eof();
 }
 
 bool Item::Write(ostream &output) const {
@@ -82,8 +82,18 @@ double Item::GetPrice() const {
 	return _price;
 }
 
+unsigned int Item::GetCategory() const {
+	return _category;
+}
+
+unsigned int Item::GetQuantity() const {
+	return _quantity;
+}
+
 /*
  * JSON format looks like this:
 {"name": "apple", "quantity": 2, "price": 2.88, "category": 3}
 
  */
+
+
