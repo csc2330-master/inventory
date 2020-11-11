@@ -3,4 +3,4 @@ project(inventory)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(inventory main.cpp)
+add_executable(inventory test.cpp item.cpp item.h)
